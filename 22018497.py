@@ -33,17 +33,25 @@ X = edge[indx]
 
 
 # plotting histogram
-plt.figure()
+plt.figure(figsize=(11, 8))
 plt.bar(xdist, ydist, width=0.9*wdist)
 
+plt.xticks(edge[::4], fontsize=17)
+plt.yticks(np.linspace(min(ydist), max(ydist), num=10), fontsize=15)
+
+plt.xlabel('Weight (kg)', fontsize=22)
+plt.ylabel('Probability', fontsize=22)
+plt.title('Distribution of Weight of Newborns', fontsize=25)
+
 # plotting and displaying mean
-plt.plot([avg, avg], [0.0, 0.075], c='red')
-text = ''' Average weight: {}kg'''.format(np.round(avg, 2))
-plt.text(x=2.7, y=0.075, s=text, fontsize=9, c='red')
+plt.plot([avg, avg], [0.0, 0.0720], c='black')
+text = ''' Average weight,W˜= {}kg'''.format(np.round(avg, 2))
+plt.text(x=2.375, y=0.0725, s=text, fontsize=20, c='black')
 
 # plotting and displaying X value
-plt.plot([X, X], [0.0, max(ydist)], c='black')
-text = '''75% are born with a weight below {}kg'''.format(np.round(X, 2))
-plt.text(x=2.33, y=max(ydist), s=text, fontsize=9, c='black')
+plt.plot([X, X], [0.0, max(ydist)], c='red')
+text = '''75% are born with a weight below X = {}kg'''.format(np.round(X, 2))
+plt.text(x=2.75, y=max(ydist) + 0.0008, s=text, fontsize=19, c='red')
+plt.bar(xdist[:indx], ydist[:indx], width=0.9*wdist[:indx], color='green')
 
 plt.show()
