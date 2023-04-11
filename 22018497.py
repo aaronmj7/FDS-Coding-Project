@@ -23,10 +23,21 @@ wdist = edge[1:] - edge[:-1]
 # normalising the distribution
 ydist = dist / np.sum(dist)
 
+# calculating the average
+avg = np.sum(xdist * ydist)
+
+# calculating the value X such that 0.75 of the distribution are below X
+# cumulative distribution
+cdist = np.cumsum(ydist)
+
+
 # plotting histogram
 plt.figure()
 plt.bar(xdist, ydist, width=0.9*wdist)
-plt.show()
 
-# calculating the average
-avg = np.sum(xdist * ydist)
+# plotting and displaying mean
+plt.plot([avg, avg], [0.0, max(ydist)], c='red')
+text = ''' Average weight: {}kg'''.format(np.round(avg, 2))
+plt.text(x=avg, y=max(ydist) + 0.001, s=text, c='red')
+
+plt.show()
