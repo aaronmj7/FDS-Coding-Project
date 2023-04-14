@@ -44,14 +44,17 @@ plt.ylabel('Probability', fontsize=22)
 plt.title('Distribution of Weight of Newborns', fontsize=25)
 
 # plotting and displaying mean
-plt.plot([avg, avg], [0.0, 0.0720], c='black')
-text = ''' Average weight,W˜= {}kg'''.format(np.round(avg, 2))
-plt.text(x=2.375, y=0.0725, s=text, fontsize=20, c='black')
+plt.axvline(avg, ymax=0.76, c='black', linestyle='-.',
+            label='W˜(Average Weight)')
+text1 = '''W˜= {}kg'''.format(np.round(avg, 2))
+plt.text(x=3.05, y=0.0725, s=text1, fontsize=20, c='black')
 
 # plotting and displaying X value
-plt.plot([X, X], [0.0, max(ydist)], c='red')
-text = '''75% are born with a weight below X = {}kg'''.format(np.round(X, 2))
-plt.text(x=2.75, y=max(ydist) + 0.0008, s=text, fontsize=19, c='red')
+plt.axvline(X, ymax=0.97, c='red', linestyle='-.',
+            label='X(75% are born with a weight above X)')
+text2 = '''X = {}kg'''.format(np.round(X, 2))
+plt.text(x=3.3, y=max(ydist) + 0.0008, s=text2, fontsize=19, c='red')
 plt.bar(xdist[:indx], ydist[:indx], width=0.9*wdist[:indx], color='green')
 
+plt.legend()
 plt.show()
