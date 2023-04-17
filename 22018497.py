@@ -53,8 +53,8 @@ plt.text(x=3.05, y=0.0725, s=text1, fontsize=20, c='black')
 plt.axvline(X, ymax=0.97, c='red', linestyle='-.',
             label='X(75% are born with a weight above X)')
 text2 = '''X = {}kg'''.format(np.round(X, 2))
-plt.text(x=3.3, y=max(ydist) + 0.0008, s=text2, fontsize=19, c='red')
+plt.text(x=X + 0.01, y=max(ydist) + 0.0008, s=text2, fontsize=19, c='red')
 plt.bar(xdist[:indx], ydist[:indx], width=0.9*wdist[:indx], color='green')
 
-plt.legend()
+plt.legend(fontsize=14)
 plt.show()
