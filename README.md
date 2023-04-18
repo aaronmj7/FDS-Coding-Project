@@ -16,3 +16,15 @@ to find out what value X you are required to calculate), and
 • prints both values, W˜ and X, on the graph.
 
 The code should create one graph only. This graph must have adequate axis labels, titles and a legend
+
+Write a short report (1 page maximum), addressing following points
+
+• Describe the data you are given;
+
+• Describe the distribution you get;
+
+• How do you calculate the mean weight? What value do you get?
+
+• How do you calculate required value X? What value do you get?
+
+You should include mathematical formulae where appropriate. You can add your own comments.
