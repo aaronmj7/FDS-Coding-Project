@@ -17,6 +17,8 @@ to find out what value X you are required to calculate), and
 
 The code should create one graph only. This graph must have adequate axis labels, titles and a legend
 
+
+
 Write a short report (1 page maximum), addressing following points
 
 • Describe the data you are given;
