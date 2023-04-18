@@ -1,6 +1,6 @@
 # FDS-Coding-Project
 
-Write a Python code, which
+1. Write a Python code, which
 
 • reads the data from a datafile located at the same directory as the Python code, and stores it in an array;
 
@@ -17,9 +17,7 @@ to find out what value X you are required to calculate), and
 
 The code should create one graph only. This graph must have adequate axis labels, titles and a legend
 
-
-
-Write a short report (1 page maximum), addressing following points
+2. Write a short report (1 page maximum), addressing following points
 
 • Describe the data you are given;
 
