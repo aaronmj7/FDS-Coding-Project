@@ -43,8 +43,7 @@ plt.title('Distribution of Weight of Newborns', fontsize=25)
 avg = np.sum(xdist * ydist)
 
 # plotting and displaying mean
-text1 = '''W˜= {}kg'''.format(np.round(avg, 2))
-# plt.text(x=3.05, y=0.0725, s=text1, fontsize=20, c='black')
+text1 = r'$\tilde{W} = $' + str(np.round(avg, 2)) + 'kg'
 plt.axvline(avg, c='black', lw=3.25, linestyle='-.', label=text1)
 
 
@@ -54,8 +53,7 @@ indx = np.argmin(np.abs(cdist - 0.75))
 X = edge[indx]
 
 # plotting and displaying X value
-text2 = '''X = {}kg'''.format(np.round(X, 2))
-# plt.text(x=X + 0.01, y=max(ydist) + 0.0008, s=text2, fontsize=19, c='red')
+text2 = 'X = {}kg'.format(np.round(X, 2))
 plt.axvline(X, c='red', lw=3.25, linestyle='--', label=text2)
 
 plt.bar(xdist[:indx], ydist[:indx], width=0.9*wdist[:indx], color='green',
@@ -65,6 +63,5 @@ plt.bar(xdist[:indx], ydist[:indx], width=0.9*wdist[:indx], color='green',
 # customising legend
 plt.legend(loc='upper left', fancybox=True, shadow=True, borderpad=1,
            fontsize=16)
-
 # showing the plot
 plt.show()
